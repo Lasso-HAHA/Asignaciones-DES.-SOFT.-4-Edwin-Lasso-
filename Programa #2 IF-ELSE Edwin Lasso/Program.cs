@@ -1,7 +1,7 @@
 ﻿
 // See https://aka.ms/new-console-template for more informatio// See https://aka.ms/new-console-template for more information
 
-Console.WriteLine("Por favpr, ingrese el monto nombre del Estudiante.");
+Console.WriteLine("Por favpr, ingrese el nombre del Estudiante.");
 string nombre = Console.ReadLine();
 
 Console.WriteLine($"Por favpr, ingrese el la nota final del estudiante {nombre}");
