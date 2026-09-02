@@ -3,21 +3,15 @@ using System.ComponentModel.Design;
 using System.Diagnostics;
 using System.Drawing;
 
-
-
-Console.WriteLine("Por favpr, ingrese el monto a pagar."); //Linea Que muestra el mensaje y el usuario debe añadir el monto de pago.
+Console.WriteLine("Por favpr, ingrese el monto a pagar.");
 int pago = Convert.ToInt32(Console.ReadLine());
-
 Console.WriteLine("Por favpr, ingrese el tipo de cliente.");
 Console.WriteLine(" 1- Regular\n 2- Frecuente \n 3-VIP");//Linea Que muestra el mensaje y el usuario debe añadir el monto de pago.
 int cliente = Convert.ToInt32(Console.ReadLine());
 
-
-
-
 if (cliente == 1) //Cliente regular
 {
-    pagar(pago, cliente); //Se renvian los datos a un método 
+    pagar(pago, cliente);
 
 }
 else if (cliente == 2) //Cliente FRECUENTE
@@ -50,7 +44,6 @@ static void pagar(int pago, int cliente)
         Console.WriteLine($"Monto a Pagar {pago}");
         Console.WriteLine("No aplica ningún descuento.");
         Console.WriteLine($"El total a pagar es de {totalpagar}");
-
     }
     else if (pago <= 100 && pago > 0 && (cliente == 2 || cliente == 3))
     {
@@ -58,11 +51,9 @@ static void pagar(int pago, int cliente)
         Console.WriteLine($"Monto a Pagar {pago}");
         Console.WriteLine("No aplica ningún descuento.");
         Console.WriteLine($"El total a pagar es de {totalpagar}");
-
     }
     else
     {
         Console.WriteLine("Un dato ingresado es invalido.");
     }
-
 }
