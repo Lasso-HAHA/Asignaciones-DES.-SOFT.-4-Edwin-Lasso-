@@ -1,4 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more informatio// See https://aka.ms/new-console-template for more information
+using System.Runtime.InteropServices.Marshalling;
+
 string tipoboletosNombre;
 
 Console.WriteLine("Bienvenidos al evento [Placeholder].\n\n");
@@ -13,15 +15,16 @@ int tipoboletos = Convert.ToInt32(Console.ReadLine());
 switch (tipoboletos) // Switch que define el tipo de boleto
 {
     case 1:
-        Console.WriteLine($"Tipo de boleto seleccionado: {tipoboletosNombre}");
+        tipoboletosNombre = "General";
         IngresoEvento(edad, cantidadboletos, tipoboletosNombre);
         break;
     case 2:
-        Console.WriteLine($"Tipo de boleto seleccionado: {tipoboletosNombre}");
+        tipoboletosNombre = "VIP";
         IngresoEvento(edad, cantidadboletos, tipoboletosNombre);
         break;
-    case 3:        
-        Console.WriteLine($"Tipo de boleto seleccionado: {tipoboletosNombre}");
+    case 3:
+
+        tipoboletosNombre = "Invitado";
         IngresoEvento(edad, cantidadboletos, tipoboletosNombre);
         break;
     default:
