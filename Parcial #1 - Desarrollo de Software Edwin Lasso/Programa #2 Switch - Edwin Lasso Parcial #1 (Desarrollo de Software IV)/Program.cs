@@ -10,22 +10,22 @@ factorAjusteTermico = celsius * factorSwitch
 
 using System.Runtime.CompilerServices;
 
-Console.WriteLine("----------Bienvenido al Sistema de Conversión Climatica---------------. \n Ingrese el la temperatura en C° (Celsius): ");
+Console.WriteLine("----------Bienvenido al Sistema de Conversión Climatica---------------. \n Ingrese el la temperatura en C° (Celsius): "); /* SE REICBEN CELSIUS*/
 double celsius = Convert.ToDouble(Console.ReadLine());
-Console.WriteLine("Seleccione el Ajuste Termico Actual");
+Console.WriteLine("Seleccione el Ajuste Termico Actual"); /* se selecciona ajuste termico*/
 Console.WriteLine($" 1. Categoría #1 \n 2. Categoría #2 \n 3. Categoría #3");
 int AJUSTE = Convert.ToInt32(Console.ReadLine());
 
-double farenheit = (celsius*1.8) +32;
+double farenheit = (celsius*1.8) +32; /* CALKCULOS GENERALES*/
 double kelvin = celsius + 273.15;
 double factorAjusteTermico = celsius * AJUSTE;
-string RESULTADOS = ($"La temperatura en Celius actual es de = {celsius}°\n" +
+string RESULTADOS = ($"La temperatura en Celius actual es de = {celsius}°\n" + /* STRING QUE JUNTA TODO*/
                     $"La temperatura Actual convertida a Fraenheti es de = {farenheit}°\n" +
                     $"La temperatura Actual convertida a Kelvin es de = {kelvin}°\n" +
                     $"Categoría Climatica Actual = {AJUSTE}\n" +
                     $"Ajuste termico acorde a la categoría en C° = {factorAjusteTermico}");
 
-switch (AJUSTE)
+switch (AJUSTE) /* switch conajustesr*/
 {
     case 1:
         Console.WriteLine($"{RESULTADOS}");
