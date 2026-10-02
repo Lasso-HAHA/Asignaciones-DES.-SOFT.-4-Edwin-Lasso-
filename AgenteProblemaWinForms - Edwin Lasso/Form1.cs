@@ -1,7 +1,7 @@
 using AgenteProblemaWinForms;
 using AgenteProblemaWinForms___Edwin_Lasso;
 using Microsoft.Agents.AI;
-// using AgenteProblemaWinForms___Edwin_Lasso.Tools;
+//using AgenteProblemaWinForms___Edwin_Lasso.Tools;
 
 namespace AgenteProblemaWinForms___Edwin_Lasso;
 
@@ -120,8 +120,8 @@ public partial class Form1 : Form
             ChatRenderer.MostrarProcesando(
                 rtbConversacion);
 
-            var response = await _agent.RunAsync(
-                consulta,
+            var response = await _agent.RunAsync(// AQUIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
+                consulta, 
                 _session);
 
             // Mostrar respuesta del agente

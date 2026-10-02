@@ -18,7 +18,7 @@ public static class AgentFactory
             vertexAI: false,
             apiKey: key);
 
-        var chatClient = client.AsIChatClient("gemini-omni-1.1-flash");
+        var chatClient = client.AsIChatClient("gemini-3.8-flash");
 
         var herramientaBuscarSolucion =
             AIFunctionFactory.Create(

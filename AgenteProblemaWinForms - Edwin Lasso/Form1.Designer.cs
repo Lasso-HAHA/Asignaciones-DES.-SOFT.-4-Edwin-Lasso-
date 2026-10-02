@@ -58,13 +58,13 @@
             lblEstadoAgente = new Label();
             lblModelo = new Label();
             pnlSidebar = new Panel();
-            lblSidebarTitulo = new Label();
-            lblSidebarDescripcion = new Label();
-            btnChat = new Button();
-            btnHerramientas = new Button();
-            btnConfiguracion = new Button();
-            lblSidebarInfo = new Label();
             lblSidebarModelo = new Label();
+            lblSidebarInfo = new Label();
+            btnConfiguracion = new Button();
+            btnHerramientas = new Button();
+            btnChat = new Button();
+            lblSidebarDescripcion = new Label();
+            lblSidebarTitulo = new Label();
             menuStripPrincipal.SuspendLayout();
             toolStripPrincipal.SuspendLayout();
             statusStripPrincipal.SuspendLayout();
@@ -237,19 +237,21 @@
             pnlConversacion.Controls.Add(btnNuevaSesion);
             pnlConversacion.Controls.Add(pnlEntrada);
             pnlConversacion.Dock = DockStyle.Fill;
-            pnlConversacion.Location = new Point(210, 0);
+            pnlConversacion.Location = new Point(210, 145);
             pnlConversacion.Name = "pnlConversacion";
-            pnlConversacion.Size = new Size(972, 677);
+            pnlConversacion.Size = new Size(972, 532);
             pnlConversacion.TabIndex = 6;
             // 
             // rtbConversacion
             // 
+            rtbConversacion.BackColor = SystemColors.Control;
             rtbConversacion.BorderStyle = BorderStyle.None;
             rtbConversacion.Dock = DockStyle.Fill;
+            rtbConversacion.ForeColor = SystemColors.WindowText;
             rtbConversacion.Location = new Point(0, 0);
             rtbConversacion.Name = "rtbConversacion";
             rtbConversacion.ReadOnly = true;
-            rtbConversacion.Size = new Size(972, 607);
+            rtbConversacion.Size = new Size(972, 462);
             rtbConversacion.TabIndex = 3;
             rtbConversacion.Text = "";
             // 
@@ -258,13 +260,14 @@
             pnlEntrada.Controls.Add(btnEnviar);
             pnlEntrada.Controls.Add(txtConsulta);
             pnlEntrada.Dock = DockStyle.Bottom;
-            pnlEntrada.Location = new Point(0, 607);
+            pnlEntrada.Location = new Point(0, 462);
             pnlEntrada.Name = "pnlEntrada";
             pnlEntrada.Size = new Size(972, 70);
             pnlEntrada.TabIndex = 1;
             // 
             // pnlHeader
             // 
+            pnlHeader.BackColor = Color.WhiteSmoke;
             pnlHeader.Controls.Add(lblTitulo);
             pnlHeader.Controls.Add(lblSubtitulo);
             pnlHeader.Controls.Add(lblEstadoAgente);
@@ -330,50 +333,14 @@
             pnlSidebar.TabIndex = 8;
             pnlSidebar.Paint += pnlSidebar_Paint;
             // 
-            // lblSidebarTitulo
+            // lblSidebarModelo
             // 
-            lblSidebarTitulo.AutoSize = true;
-            lblSidebarTitulo.Location = new Point(12, 9);
-            lblSidebarTitulo.Name = "lblSidebarTitulo";
-            lblSidebarTitulo.Size = new Size(91, 20);
-            lblSidebarTitulo.TabIndex = 0;
-            lblSidebarTitulo.Text = "TECHASSIST";
-            // 
-            // lblSidebarDescripcion
-            // 
-            lblSidebarDescripcion.AutoSize = true;
-            lblSidebarDescripcion.Location = new Point(12, 33);
-            lblSidebarDescripcion.Name = "lblSidebarDescripcion";
-            lblSidebarDescripcion.Size = new Size(121, 20);
-            lblSidebarDescripcion.TabIndex = 1;
-            lblSidebarDescripcion.Text = "Asistente técnico";
-            // 
-            // btnChat
-            // 
-            btnChat.Location = new Point(19, 90);
-            btnChat.Name = "btnChat";
-            btnChat.Size = new Size(152, 29);
-            btnChat.TabIndex = 2;
-            btnChat.Text = "💬  Chat";
-            btnChat.UseVisualStyleBackColor = true;
-            // 
-            // btnHerramientas
-            // 
-            btnHerramientas.Location = new Point(19, 135);
-            btnHerramientas.Name = "btnHerramientas";
-            btnHerramientas.Size = new Size(152, 29);
-            btnHerramientas.TabIndex = 3;
-            btnHerramientas.Text = "🔧  Herramientas";
-            btnHerramientas.UseVisualStyleBackColor = true;
-            // 
-            // btnConfiguracion
-            // 
-            btnConfiguracion.Location = new Point(19, 181);
-            btnConfiguracion.Name = "btnConfiguracion";
-            btnConfiguracion.Size = new Size(152, 29);
-            btnConfiguracion.TabIndex = 4;
-            btnConfiguracion.Text = "⚙  Configuración";
-            btnConfiguracion.UseVisualStyleBackColor = true;
+            lblSidebarModelo.AutoSize = true;
+            lblSidebarModelo.Location = new Point(19, 641);
+            lblSidebarModelo.Name = "lblSidebarModelo";
+            lblSidebarModelo.Size = new Size(56, 20);
+            lblSidebarModelo.TabIndex = 6;
+            lblSidebarModelo.Text = "Gemini";
             // 
             // lblSidebarInfo
             // 
@@ -385,14 +352,50 @@
             lblSidebarInfo.TabIndex = 5;
             lblSidebarInfo.Text = "AGENTE ACTIVO";
             // 
-            // lblSidebarModelo
+            // btnConfiguracion
             // 
-            lblSidebarModelo.AutoSize = true;
-            lblSidebarModelo.Location = new Point(19, 641);
-            lblSidebarModelo.Name = "lblSidebarModelo";
-            lblSidebarModelo.Size = new Size(56, 20);
-            lblSidebarModelo.TabIndex = 6;
-            lblSidebarModelo.Text = "Gemini";
+            btnConfiguracion.Location = new Point(19, 181);
+            btnConfiguracion.Name = "btnConfiguracion";
+            btnConfiguracion.Size = new Size(152, 29);
+            btnConfiguracion.TabIndex = 4;
+            btnConfiguracion.Text = "⚙  Configuración";
+            btnConfiguracion.UseVisualStyleBackColor = true;
+            // 
+            // btnHerramientas
+            // 
+            btnHerramientas.Location = new Point(19, 135);
+            btnHerramientas.Name = "btnHerramientas";
+            btnHerramientas.Size = new Size(152, 29);
+            btnHerramientas.TabIndex = 3;
+            btnHerramientas.Text = "🔧  Herramientas";
+            btnHerramientas.UseVisualStyleBackColor = true;
+            // 
+            // btnChat
+            // 
+            btnChat.Location = new Point(19, 90);
+            btnChat.Name = "btnChat";
+            btnChat.Size = new Size(152, 29);
+            btnChat.TabIndex = 2;
+            btnChat.Text = "💬  Chat";
+            btnChat.UseVisualStyleBackColor = true;
+            // 
+            // lblSidebarDescripcion
+            // 
+            lblSidebarDescripcion.AutoSize = true;
+            lblSidebarDescripcion.Location = new Point(12, 33);
+            lblSidebarDescripcion.Name = "lblSidebarDescripcion";
+            lblSidebarDescripcion.Size = new Size(121, 20);
+            lblSidebarDescripcion.TabIndex = 1;
+            lblSidebarDescripcion.Text = "Asistente técnico";
+            // 
+            // lblSidebarTitulo
+            // 
+            lblSidebarTitulo.AutoSize = true;
+            lblSidebarTitulo.Location = new Point(12, 9);
+            lblSidebarTitulo.Name = "lblSidebarTitulo";
+            lblSidebarTitulo.Size = new Size(91, 20);
+            lblSidebarTitulo.TabIndex = 0;
+            lblSidebarTitulo.Text = "TECHASSIST";
             // 
             // Form1
             // 
@@ -400,10 +403,10 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1182, 703);
+            Controls.Add(pnlConversacion);
             Controls.Add(menuStripPrincipal);
             Controls.Add(toolStripPrincipal);
             Controls.Add(pnlHeader);
-            Controls.Add(pnlConversacion);
             Controls.Add(pnlSidebar);
             Controls.Add(statusStripPrincipal);
             MainMenuStrip = menuStripPrincipal;

@@ -6,18 +6,16 @@ namespace AgenteProblemaWinForms;
 public static class ChatRenderer
 {
     private static readonly Color ColorUsuario =
-        Color.FromArgb(70, 140, 255);
+        Color.FromArgb(30, 90, 180);
 
     private static readonly Color ColorAgente =
-        Color.FromArgb(110, 170, 255);
+        Color.FromArgb(20, 70, 140);
 
     private static readonly Color Texto =
-        Color.FromArgb(245, 247, 250);
+        Color.FromArgb(35, 35, 35);
 
     private static readonly Color TextoSecundario =
-        Color.FromArgb(170, 176, 187);
-
-
+        Color.FromArgb(80, 80, 80);
     public static void Limpiar(RichTextBox chat)
     {
         chat.Clear();
